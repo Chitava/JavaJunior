@@ -25,5 +25,6 @@ public class Main {
 //        StudentV2 student = new StudentV2("Вася", 25, 4.2);
 //        SerilaiseJSON.serilaise(student, "userdata.json");
         StudentV2 st = SerilaiseJSON.deserilaise("userdata.json");
+        System.out.println(st);
     }
 }

@@ -4,12 +4,10 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 
 public class StudentV2 {
     //region Поля
-    @JsonSetter("name")
-    private String name;
-    @JsonSetter("age")
-    private int age;
-    @JsonSetter("GPA")
-    private transient double GPA;
+
+
+    private String age;
+
 
     //endregion
     //region Конструкторы
@@ -18,7 +16,7 @@ public class StudentV2 {
 
     @Override
     public String toString() {
-        return String.format("Имя - %s\nВозраст - %s\nСредний балл - %s", getName(), getAge(), getGPA());
+        return String.format("Возраст - %s\n", getAge());
     }
 
 //    public StudentV2(String name, int age, double GPA) {
@@ -27,28 +25,17 @@ public class StudentV2 {
 //        this.GPA = GPA;
 //    }//endregion
      //    region Getter Setter
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public int getAge() {
+
+
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
-    public double getGPA() {
-        return GPA;
-    }
-
-    public void setGPA(double GPA) {
-        this.GPA = GPA;
-    }
     //endregion
 }

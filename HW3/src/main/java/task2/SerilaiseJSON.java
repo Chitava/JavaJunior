@@ -1,8 +1,10 @@
 package task2;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 import java.io.*;
 
@@ -28,9 +30,13 @@ public class SerilaiseJSON {
 //        }
     }
 
-    public static StudentV2 deserilaise(String fileName) throws JsonProcessingException {
+    public static StudentV2 deserilaise(String fileName) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-        StudentV2 student = objectMapper.readValue(fileName, StudentV2.class);
+        objectMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+
+        StudentV2 student = objectMapper.readValue(new File(fileName),  objectMapper.getTypeFactory()
+                .constructType(StudentV2.class));
+
         System.out.println("Объект десериализован.");
         return student;
 
