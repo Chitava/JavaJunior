@@ -16,19 +16,18 @@
       <console name="students-db" type="STANDARD" schema="" session="Main"><![CDATA[select * from students]]></console>
     </connection>
     <connection id="4b9aa0b9-114f-4b7b-a984-78836b57f3cc">
-      <console name="Connection" type="STANDARD" schema="lsin" session="Main"><![CDATA[select * from components;]]></console>
+      <console name="Connection" type="STANDARD" schema="course" session="Main"><![CDATA[select * from courses;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="4b9aa0b9-114f-4b7b-a984-78836b57f3cc" object-ref="consoles/Connection" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="4b9aa0b9-114f-4b7b-a984-78836b57f3cc" dataset="lsin.components" active-filter-id="" />
+    <filter-actions connection-id="4b9aa0b9-114f-4b7b-a984-78836b57f3cc" dataset="course.courses" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -82,7 +81,7 @@
           <session-management value="true" />
           <ddl-file-binding value="true" />
           <database-logging value="true" />
-          <connect-automatically value="true" />
+          <connect-automatically value="false" />
           <restore-workspace value="true" />
           <restore-workspace-deep value="false" />
           <environment-type value="default" />
@@ -175,7 +174,7 @@
           <session-management value="true" />
           <ddl-file-binding value="true" />
           <database-logging value="true" />
-          <connect-automatically value="true" />
+          <connect-automatically value="false" />
           <restore-workspace value="true" />
           <restore-workspace-deep value="false" />
           <environment-type value="default" />
