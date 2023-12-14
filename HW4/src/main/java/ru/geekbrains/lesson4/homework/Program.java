@@ -23,5 +23,6 @@ public class Program {
         Sqlmethod.updateDataDB(course1);
         course1 = Sqlmethod.selectFromDBbyId(6);
         System.out.println(course1);
+        Sqlmethod.deleteDataDB(course1);
     }
 }
