@@ -19,5 +19,9 @@ public class Program {
 //        Sqlmethod.insertToDB(course);
         Course course1 = Sqlmethod.selectFromDBbyId(6);
         System.out.println(course1);
+        course1.setDuration(60);
+        Sqlmethod.updateDataDB(course1);
+        course1 = Sqlmethod.selectFromDBbyId(6);
+        System.out.println(course1);
     }
 }
