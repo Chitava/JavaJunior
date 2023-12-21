@@ -20,8 +20,13 @@ public class ClientManager implements Runnable {
             bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             name = bufferedReader.readLine();
             clients.add(this);
+            StringBuilder users = new StringBuilder();
+            for (ClientManager client: clients){
+                users.append(client.name + "\n");
+            }
             System.out.println(name + " подключился к чату.");
-            broadcastMessage("Server: " + name + " подключился к чату.", name);
+            broadcastMessage("Server: " + name + " подключился к чату. В сети " + clients.size() + " человек\n"
+                    + users, name);
         } catch (IOException e) {
             closeEverything(socket, bufferedReader, bufferedWriter);
         }
